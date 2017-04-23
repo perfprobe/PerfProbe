@@ -8,7 +8,7 @@ for f in $(ls user/*);
 do
     ./parse < $f >> user.$1.decoded
 done
-cat nexus6.kernel.gallery.decoded user.$1.decoded > $1.decoded
+cat kernel.$1.decoded user.$1.decoded > $1.decoded
 ./sort_json.sh $1.decoded
 mv sorted.$1.decoded $1.decoded
 rm user.$1.decoded kernel.$1.decoded
