@@ -12,5 +12,5 @@ do
 done
 for f in $(ls *.$1.out);
 do
-    cat $f | python allMethod_vine.py >> methods.all.$1
+    cat $f | python allMethod.py >> methods.all.$1
 done
