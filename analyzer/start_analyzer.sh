@@ -4,7 +4,7 @@ for f in $(ls *.traceview); do tid=$(echo $f | cut -d'.' -f1); i=$(echo $f | cut
 # Prune to get top-K inner methods for DT selection
 ./get_topk_method.sh $k $app
 
-# DT selection on function features
+# DT selection on inner function features
 echo -n "label" > feature.meta; for l in $(cat method_feature.meta); do echo -n ",$l" >> feature.meta; done
 for l in $(cut -d',' -f2 *.latency); do if [ $l -gt $thres ]; then echo "-1" >> tmp; else echo "+1" >> tmp; fi; done
 paste tmp method_feature.val > dtree.csv
