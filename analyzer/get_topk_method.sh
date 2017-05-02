@@ -1,4 +1,5 @@
-app=$1
+# K, app_name
+app=$2
 rm method_feature.meta method_feature.val
 for i in $(cut -d' ' -f1 $app.latency);
 do
