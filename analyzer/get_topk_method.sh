@@ -1,7 +1,7 @@
 # K, app_name
 app=$2
 rm method_feature.meta method_feature.val
-for i in $(cut -d' ' -f1 $app.latency);
+for i in $(cut -d',' -f1 $app.latency);
 do
     if [ ! -e methods.inner.$i ]; then continue; fi
     cat methods.inner.$i | python MethodFeature.py > method.feature.$i
@@ -12,7 +12,7 @@ do
 done
 sort method_feature.meta | uniq > method_feature.meta.tmp
 mv method_feature.meta.tmp method_feature.meta
-for i in $(cut -d' ' -f1 $app.latency);
+for i in $(cut -d',' -f1 $app.latency);
 do
     if [ ! -e methods.inner.$i ]; then continue; fi
     for line in $(cat method_feature.meta);
