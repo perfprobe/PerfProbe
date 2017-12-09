@@ -2,13 +2,15 @@
 Android app performance diagnosis tool
 
 #### Tool description
-User-perceived performance problems occur in an unpredictable and sophisticated way in mobile apps. However, we see a lack of effective approach to facilitate app developers in debugging such intermittent performance problems. To address this limitation, we develop a systematic debugging framework PerfProbe, that automatically diagnoses intermittent user-perceived performance problems in mobile apps. PerfProbe leverages app and OS-layer runtime information and applies a novel, two-step statistical analysis to associate an app’s code-level execution and its underlying OS resource usage to the cause of a performance problem. To provide holistic understanding on the root cause and ac- tionable hints for debugging, it pinpoints critical functions and their underlying resource factors relevant to a problem.
+User-perceived performance variance in mobile apps can occur in unpredictable and sophisticated ways. PerfProbe is a performance diagnosis system that supports automatic detection and systematic diagnosis of intermittent performance problems on mobile platforms. PerfProbe records app and OS-layer runtime information on a mobile device in a lightweight manner to support in-the-wild deployment and applies novel statistical analysis on them to identify critical functions as the source of performance variance and pinpoint relevant resource factors for each critical function to help understand the root cause of performance variance. 
 
 #### Code documentation
 traceview folder includes the implementation for automatically collecting function call traces using Andorid's built-in profiler
 
 panappticon folder includes the implementaion for automatically collecting OS event traces using Panappticon
 
-tester folder includes the implementation of Android's MonkeyRunner-based automated testing on a particular user interaction with cross-layer tracing option
+tester folder includes the implementation of Android's MonkeyRunner-based automated controlled testing on a particular user interaction with cross-layer tracing option
 
-analyzer folder includes the implementation of cross-layer trace analysis for pinpointing critical function calls and releant resource factors
+analyzer folder includes the implementation of PerfProbe's offline diagnosis module that performs cross-layer trace analysis for pinpointing critical functions and relevant resource factors
+
+monitor folder includes the implementation of PerfProbe's performance monitoring module that supports in-the-wild toapp and OS-layer traces recording 
