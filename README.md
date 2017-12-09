@@ -9,6 +9,8 @@ traceview folder includes the implementation for automatically collecting functi
 
 panappticon folder includes the implementaion for automatically collecting OS event traces using Panappticon
 
+ui folder includeds the instrumentation on common UI components in Android's framework
+
 tester folder includes the implementation of Android's MonkeyRunner-based automated controlled testing on a particular user interaction with cross-layer tracing option
 
 analyzer folder includes the implementation of PerfProbe's offline diagnosis module that performs cross-layer trace analysis for pinpointing critical functions and relevant resource factors
