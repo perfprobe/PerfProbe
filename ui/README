@@ -1,1 +1,1 @@
-Instrumentaion on common UI classes on Android's framework (frameworks/base/core/java/android/view and frameworks/base/core/java/android/widge)to intercept UI input and update events
+Instrumentaion on common UI classes in Android's framework (frameworks/base/core/java/android/view and frameworks/base/core/java/android/widget) to intercept UI input and update events
