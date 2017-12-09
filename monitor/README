@@ -1,1 +1,4 @@
 Monitoring module
+
+Instrumentation on UI event handlers in Android's framework (frameworks/base/core/java/android/view/ and frameworks/base/core/java/android/widget/) 
+Instrumentation on Activity event handers in Android's framework (frameworks/base/core/java/android/app/)
